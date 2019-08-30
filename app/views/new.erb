@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Alexis Auto Grocer</h1>
+		<h3><p>
+			Enter as many items as you want!
+		</h3></p>
+		<form action="/list/<%= @list.id %>/edit" method="POST">
+			<p>
+				<label>Item</label>
+				<input id="hidden" type="hidden" name="_method" value="patch">
+				<input type="text" name="item_name">
+			</p>
+			<p>
+				<label>Quantity</label>
+				<input id="hidden" type="hidden" name="_method" value="patch">
+				<input type="number" name="quantity">
+			</p>
+			<input type="submit" value="Add Item">
+		</form>
+		<form action="/list" method="GET">
+			<p>
+				<input type="submit" value="Click here to see your list!">
+			</p>
+		</form>
+		<form action="" method="">
+			<p>
+				<input type="submit" value="Checkout">
+			</p>
+		</form>
+	</body>
+</html>
